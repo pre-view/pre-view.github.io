@@ -25,7 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 location.hash = '';
 
-docute.init();
+docute.init({
+    home : './README.txt',
+});
 
 docute.router.beforeEach(function ( from, to, next ) {
     const body = document.querySelector('.markdown-body');
