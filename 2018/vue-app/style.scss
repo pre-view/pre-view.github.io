@@ -46,16 +46,6 @@ iframe {
         opacity: 0;
         transition: opacity 0s;
     }
-    // h2 {
-    //     &[id*="前言"] {
-    //         pointer-events: none;
-    //     }
-    // }
-    // h2 {
-    //     &[id*="目录"] {
-    //         visibility: hidden;
-    //     }
-    // }
     h2,
     h3,
     h4 {
@@ -98,27 +88,6 @@ iframe {
     width: 100%;
     padding-right: 20px;
     box-sizing: content-box;
-}
-
-.sidebar {
-    // a[href*="preface"] {
-    //     pointer-events: none;
-    //     font-size: 0;
-    //     line-height: 14px;
-    //     &::before {
-    //         content: "前言";
-    //         font-size: 14px;
-    //     }
-    // }
-    // a[href*="catalogue"] {
-    //     pointer-events: none;
-    //     font-size: 0;
-    //     line-height: 14px;
-    //     &::before {
-    //         content: "目录";
-    //         font-size: 14px;
-    //     }
-    // }
 }
 
 p.tip {
