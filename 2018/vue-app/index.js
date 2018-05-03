@@ -17,8 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
             for (let i = 0; i < anchor.length - 1; i++) {
                 if (anchor[i].classList.contains('active')) {
                     anchor[i+1].click();
+                    return;
                 }
             }
+            anchor[1].click();
+            return;
         }
     });
 });
@@ -29,12 +32,19 @@ docute.init({
     home : './README.txt',
 });
 
-docute.router.beforeEach(function ( from, to, next ) {
+
+docute.router.beforeEach(function ( to, from, next ) {
     const body = document.querySelector('.markdown-body');
     body.classList.add('hide');
     setTimeout(function(){
         body.classList.remove('hide');
     }, 600);
+    const button = document.querySelector('button');
+    if (/后记/.test(to.query.id)) {
+        button.classList.add('disabled');
+    } else {
+        button.classList.remove('disabled');
+    }
     next();
 });
 
