@@ -69,11 +69,16 @@ iframe {
         display: block;
         cursor: pointer;
         outline: 0;
+        user-select: none;
         &:hover {
             opacity: .9;
         }
         &:active {
             opacity: .8;
+        }
+        &.disabled {
+            pointer-events: none;
+            filter: grayscale(.9);
         }
     }
     br:last-child {
