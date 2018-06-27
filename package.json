@@ -1,0 +1,27 @@
+{
+  "name": "pre-view.github.io",
+  "version": "1.0.0",
+  "description": "[![Twitter](https://img.shields.io/badge/twitter-@qq393464140-blue.svg)](http://twitter.com/qq393464140) [![](https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg)](https://preview.lixinliang.com)",
+  "main": "index.js",
+  "scripts": {
+    "prepush": "npm run make_readme_md.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pre-view/pre-view.github.io.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pre-view/pre-view.github.io/issues"
+  },
+  "homepage": "https://github.com/pre-view/pre-view.github.io#readme",
+  "devDependencies": {
+    "husky": "^1.0.0-rc.9"
+  },
+  "dependencies": {
+    "fs-extra": "^6.0.1",
+    "lodash": "^4.17.10"
+  }
+}
