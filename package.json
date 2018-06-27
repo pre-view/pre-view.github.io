@@ -4,8 +4,12 @@
   "description": "[![Twitter](https://img.shields.io/badge/twitter-@qq393464140-blue.svg)](http://twitter.com/qq393464140) [![](https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg)](https://preview.lixinliang.com)",
   "main": "index.js",
   "scripts": {
-    "prepush": "npm run make_readme_md.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "prepush": "npm run make_readme_md.js"
+    }
   },
   "repository": {
     "type": "git",
