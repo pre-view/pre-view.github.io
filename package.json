@@ -8,7 +8,7 @@
   },
   "husky": {
     "hooks": {
-      "prepush": "npm run make_readme_md.js"
+      "prepush": "node make_readme_md.js"
     }
   },
   "repository": {
@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "fs-extra": "^6.0.1",
+    "klaw-sync": "^4.0.0",
     "lodash": "^4.17.10"
   }
 }
