@@ -33,39 +33,39 @@ Experience: __$date__ __years Front-End Engineer__
 
 #### 2018/11
 
-> 一件 双11 https://s-yijian.yy.com/special_20181111/index.html#/index
+> Yijian APP, double 11 shopping carnival activity: https://s-yijian.yy.com/special_20181111/index.html#/index
 
 #### 2018/06
 
-> 一件 618 https://preview.lixinliang.com/demo/yijian-618
+> Yijian APP, 618 shopping carnival activity: https://preview.lixinliang.com/demo/yijian-618
 
 #### 2017/12
 
-> 开心斗 凑硬币同屏小游戏 https://preview.lixinliang.com/demo/coins-battle
+> MakeFriends APP, coins battle game: https://preview.lixinliang.com/demo/coins-battle
 
 #### 2017/03
 
-> Mango 需求方下单应用
+> Mango, order system for PM.
 
 #### 2016/11
 
-> YY 2016 年度盛典专题 移动端 http://m.yy.com/act/ceremony2016_3/mobile/rank.html
+> YY, annual ceremony of 2016 activity, mobile: http://m.yy.com/act/ceremony2016_3/mobile/rank.html
 
 #### 2016/07
 
-> ME直播 夏日之星 http://ceshi.duowan.com/1810/m_404946024532.html
+> ME Live APP, summer star activity: http://ceshi.duowan.com/1810/m_404946024532.html
 
 #### 2015/12
 
-> 多玩网 英雄联盟 英雄攻略页 http://lol.duowan.com/annie
+> Douwan, League of Legends, hero information page: http://lol.duowan.com/annie
 
 #### 2015/11
 
-> Douwan official website of 2016 Ver. http://www.duowan.com/s/2016.html
+> Douwan, official website of 2016 Ver: http://www.duowan.com/s/2016.html
 
 #### 2015/06
 
-> 多玩网 地下城与勇士 深渊模拟器 http://dnf.duowan.com/s/symn.html
+> Douwan, Dungeon and Fighter, abyss simulator: http://dnf.duowan.com/s/symn.html
 
 #### 2015/03
 

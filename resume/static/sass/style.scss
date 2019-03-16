@@ -135,8 +135,16 @@ img {
   }
 }
 
-.markdown-body code {
-  background: #fbf3ea;
+.markdown-body {
+  code {
+    background: #fbf3ea;
+  }
+  a {
+    word-break: break-all;
+    @media (min-width: 768px) {
+      word-break: normal;
+    }
+  }
 }
 
 h4[id="000000"] {
