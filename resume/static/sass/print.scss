@@ -1,0 +1,82 @@
+.Header,
+.Sidebar {
+  display: none;
+}
+
+#app .Main {
+  margin-top: 0;
+  margin-left: 0;
+}
+
+hr {
+  display: none;
+}
+
+.markdown-body {
+  h3 {
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  h4 {
+    margin-bottom: 10px;
+  }
+  p {
+    line-height: 1.4;
+  }
+  blockquote {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    border: none;
+    background: none;
+  }
+}
+
+h4[id="201811"],
+h4[id="201806"],
+h4[id="201712"],
+h4[id="201703"],
+h4[id="201611"],
+h4[id="201607"],
+h4[id="201512"],
+h4[id="201511"],
+h4[id="201506"],
+h4[id="201103"],
+h4[id="201406"],
+h4[id="201009"],
+h4[id="200510"] {
+  &,
+  & + p,
+  & + blockquote {
+    display: none;
+  }
+}
+
+h4[id="201503"] {
+  & + p,
+  & + p + p {
+    display: none;
+  }
+}
+
+h4[id="000000"] {
+  & + p,
+  & + p + p,
+  & + p + p + blockquote,
+  & + p + p + blockquote + ul,
+  & + p + p + blockquote + ul + blockquote,
+  & + p + p + blockquote + ul + blockquote ul {
+    display: block;
+  }
+}
+
+h3[id="patent"],
+h3[id="专利"] {
+  & + blockquote,
+  & + blockquote + blockquote {
+    padding: 5px 0;
+    p {
+      line-height: 1.7;
+    }
+  }
+}

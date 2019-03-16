@@ -1,231 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cmn-Hans">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta name="format-detection" content="telephone=no,address=no,email=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   <title> RESUME </title>
-  <link rel="stylesheet" href="https://unpkg.com/docute@3/dist/docute.css">
-  <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./font/consolas/font.css">
-  <style media="screen">
-    a:not([href^="#"])::before {
-      content: "\f0c1";
-      font: normal normal normal 14px/1 FontAwesome;
-      font-size: inherit;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      letter-spacing: 3px;
-    }
-    img {
-      display: none;
-      border-radius: 3px;
-    }
-    img[alt="avatar"] {
-      border-radius: 50%;
-    }
-    [lang] {
-      display: none;
-    }
-    #app [lang] + * {
-      margin-top: 0;
-    }
-    [data-action="view-picture"]::before {
-      content: "view picture";
-    }
-    [lang="zh"] ~ [data-action="view-picture"]::before {
-      content: "查看图片";
-    }
-    label {
-      top: -15px;
-      color: #999;
-      padding: 0 3px;
-      cursor: pointer;
-      font-size: 12px;
-      overflow: hidden;
-      font-style: normal;
-      position: relative;
-      border-radius: 3px;
-      display: inline-block;
-      vertical-align: bottom;
-      border: 1px solid currentColor;
-    }
-    #timeline- label {
-      top: -6px;
-    }
-    label::before {
-      content: attr(for);
-    }
-    [lang="zh"] ~ * label[for="reset"]::before {
-      content: "重置";
-    }
-    #reset:checked ~ #app [for="reset"] {
-      display: none;
-    }
-    #timeline- label:not([for="reset"]) {
-      display: none;
-      pointer-events: none;
-    }
-    input[type="radio"] {
-      opacity: 0;
-      z-index: -1;
-      position: absolute;
-    }
-    input[type="radio"]:not(#reset):checked ~ #app .content > * {
-      display: none;
-    }
-    input[type="radio"]:not(#reset):checked ~ #app #timeline- {
-      display: block;
-      margin-top: 0;
-    }
-    body {
-      overflow: hidden;
-      /* hack for the scroll bug */
-    }
-    [lang="zh"] ~ #timeline- {
-        font-size: 0;
-        padding-bottom: 7.2px;
-    }
-    [lang="zh"] ~ #timeline- label {
-        margin-left: 5px;
-    }
-    [lang="zh"] ~ #timeline- .anchor {
-        line-height: 30px;
-    }
-    [lang="zh"] ~ #timeline-::before {
-        content: "时间线";
-        height: 30px;
-        font-size: 24px;
-        line-height: 30px;
-        font-weight: 600;
-        vertical-align: top;
-        display: inline-block;
-    }
-    a[href="#/zh/?id=timeline-"] {
-        font-size: 0;
-    }
-    a[href="#/zh/?id=timeline-"]::before {
-        font-size: 14px;
-        content: "时间线";
-    }
-    .sidebar-headings .sidebar-heading .sidebar-heading-anchor[href*="20"] {
-        display: none;
-    }
-    [data-filter]::before {
-        content: "\f0b0";
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: inherit;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        letter-spacing: 10px;
-        color: #0366d6;
-    }
-    [data-filter] label {
-        top: 0;
-    }
-  </style>
-  <style media="print">
-    img,
-    input,
-    label,
-    button,
-    .header,
-    .sidebar,
-    .sidebar-toggle {
-      display: none;
-    }
-    img[alt="avatar"] {
-      display: block;
-    }
-    .content {
-      margin-top: 0;
-      padding-top: 0;
-    }
-    .content-wrap {
-      overflow: visible;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="./dev/docute.css">
+  <link rel="stylesheet" type="text/css" href="./static/css/style.css">
+  <link rel="stylesheet" type="text/css" href="./static/css/print.css" media="print">
 </head>
 <body>
-  <script>
-  [
-    ['hobby', '业余', '#e34c26'],// HTML
-    ['patent', '专利', '#563d7c'],// CSS
-    ['career', '工作', '#ffac45'],// Swift
-    ['education', '教育', '#3572A5'],// Python
-    ['conference', '会议', '#4F5D95'],// PHP
-    ['competition', '比赛', '#b07219'],// Java
-    ['presentation', '演讲', '#2b7489'],// TypeScript
-].forEach(function ( item ) {
-    const tag = item[0];
-    const zh = item[1];
-    const color = item[2];
-    const div = document.createElement('div');
-    [
-        `<style>[lang="zh"] ~ [for="${ tag }"]::before {content:"${ zh }"}</style>`,
-        `<style>[lang="zh"] ~ * [for="${ tag }"]::before {content:"${ zh }"}</style>`,
-        `<style>[for="${ tag }"] {color:${ color }}</style>`,
-        `<style>[for="${ tag }"]:hover {color:#fff;border-color:${ color };background-color:${ color }}</style>`,
-        `<style>#${ tag }:checked ~ #app #timeline- {color:${ color }}</style>`,
-        `<style>#${ tag }:checked ~ #app #timeline- [for="${ tag }"] {display: inline-block}</style>`,
-        `<style>#${ tag }:checked ~ #reset + #app #timeline- ~ label {display: none}</style>`,
-    ].concat(
-        Array.apply(null, { length: 10 }).map(function ( value, index ) {
-            const length = index + 1;
-            const exclude = Array.apply(null, { length: length }).map(function () {
-                return `*:not([data-line])`;
-            }).join('+');
-            return `<style>#${ tag }:checked ~ #app #timeline- ~ [data-line="${ tag }"] + ${ exclude } {display:block}</style>`;
-        })
-    ).forEach(function ( style ) {
-        div.innerHTML = style;
-        document.head.appendChild(div.firstElementChild);
-    });
-    div.innerHTML = `<input type="radio" id="${ tag }" name="filter">`;
-    document.body.appendChild(div.firstElementChild);
-  });
-  </script>
-  <input type="radio" id="reset" name="filter" checked>
   <div id="app"></div>
-  <script src="https://unpkg.com/docute@3/dist/docute.js"></script>
-  <script>
-  const langs = [
-    { title: 'English', path: '/en/' },
-    { title: '简体中文', path: '/zh/' },
-  ]
-  docute.init({
-    tocVisibleDepth: 3,
-    home: 'en/README.md',
-    twitter: 'qq393464140',
-    repo: 'lixinliang/resume',
-    nav: {
-      default: [
-        {
-          title: 'Languages', type: 'dropdown', items: langs
-        }
-      ],
-      'zh-Hans': [
-        {
-          title: '选择语言', type: 'dropdown', items: langs
-        }
-      ],
-    },
-  })
-  </script>
-  <script>
-  document.addEventListener('click', function ( event ) {
-      const target = event.target;
-      if (event.isTrusted && target.dataset.action == 'view-picture') {
-          target.nextElementSibling.querySelector('img').style.display = 'block';
-          target.parentNode.removeChild(target);
-          return;
-      }
-  }, false);
-  document.querySelector('#reset').addEventListener('change', function () {
-      document.querySelector('a[href*=timeline]').click();
-  }, false);
-  </script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docute@4.9.3/dist/docute.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/qrcode_js@1.0.0"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+  <script type="text/javascript" src="./static/js/main.js"></script>
+  <!-- <script type="text/javascript" src="cdn.jsdelivr.net/npm/mousetrap@1.6.2"></script> -->
+  <!-- <script type="text/javascript" src="cdn.jsdelivr.net/npm/sass.js@0.10.13"></script> -->
 </body>
 </html>
