@@ -146,15 +146,3 @@ img {
     }
   }
 }
-
-h4[id="000000"] {
-  &,
-  & + p,
-  & + p + p,
-  & + p + p + blockquote,
-  & + p + p + blockquote + ul,
-  & + p + p + blockquote + ul + blockquote,
-  & + p + p + blockquote + ul + blockquote ul {
-    display: none;
-  }
-}

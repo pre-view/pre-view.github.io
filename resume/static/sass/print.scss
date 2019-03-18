@@ -15,13 +15,18 @@ hr {
 .markdown-body {
   h3 {
     font-weight: 500;
-    margin-bottom: 10px;
+    margin: 15px 0 10px;
   }
   h4 {
-    margin-bottom: 10px;
+    font-size: 1em;
+    margin: 5px 0;
   }
   p {
+    margin: 5px 0;
     line-height: 1.4;
+  }
+  ul {
+    margin: 5px 0;
   }
   blockquote {
     margin: 0;
@@ -30,50 +35,33 @@ hr {
     border: none;
     background: none;
   }
+  strong {
+    font-weight: 400;
+  }
 }
 
-h4[id="201811"],
-h4[id="201806"],
-h4[id="201712"],
-h4[id="201703"],
-h4[id="201611"],
-h4[id="201607"],
-h4[id="201512"],
-h4[id="201511"],
-h4[id="201506"],
 h4[id="201103"],
-h4[id="201406"],
 h4[id="201009"],
 h4[id="200510"] {
   &,
-  & + p,
-  & + blockquote {
+  & + p {
     display: none;
   }
 }
 
-h4[id="201503"] {
-  & + p,
-  & + p + p {
+h3[id="preview"],
+h3[id="作品预览"] {
+  &,
+  & ~ blockquote {
     display: none;
   }
 }
 
-h4[id="000000"] {
-  & + p,
-  & + p + p,
-  & + p + p + blockquote,
-  & + p + p + blockquote + ul,
-  & + p + p + blockquote + ul + blockquote,
-  & + p + p + blockquote + ul + blockquote ul {
-    display: block;
-  }
-}
 
 h3[id="patent"],
 h3[id="专利"] {
-  & + blockquote,
-  & + blockquote + blockquote {
+  & ~ blockquote {
+    display: block;
     padding: 5px 0;
     p {
       line-height: 1.7;

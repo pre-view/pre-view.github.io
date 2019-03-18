@@ -33,6 +33,10 @@ var docute = new Docute({
           link: '#timeline'
         },
         {
+          title: 'Preview',
+          link: '#preview'
+        },
+        {
           title: 'Patent',
           link: '#patent'
         }
@@ -59,6 +63,10 @@ var docute = new Docute({
             {
               title: '时间线',
               link: '#时间线'
+            },
+            {
+              title: '作品预览',
+              link: '#作品预览'
             },
             {
               title: '专利',
